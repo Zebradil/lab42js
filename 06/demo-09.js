@@ -1,5 +1,5 @@
-/** Конструкция try…catch **/
-/** Оборачивание исключений **/
+/** РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ tryвЂ¦catch **/
+/** РћР±РѕСЂР°С‡РёРІР°РЅРёРµ РёСЃРєР»СЋС‡РµРЅРёР№ **/
 
 (function () {
 
@@ -20,11 +20,11 @@
         } catch (e) {
             // ...
             if (e.name == 'URIError') {
-                throw new ReadError("Ошибка в URI", e);
+                throw new ReadError("РћС€РёР±РєР° РІ URI", e);
             } else if (e.name == 'SyntaxError') {
-                throw new ReadError("Синтаксическая ошибка в данных", e);
+                throw new ReadError("РЎРёРЅС‚Р°РєСЃРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° РІ РґР°РЅРЅС‹С…", e);
             } else {
-                throw e; // пробрасываем
+                throw e; // РїСЂРѕР±СЂР°СЃС‹РІР°РµРј
             }
         }
     }
@@ -34,7 +34,7 @@
     } catch (e) {
         if (e.name == 'ReadError') {
             alert( e.message );
-            alert( e.cause ); // оригинальная ошибка-причина
+            alert( e.cause ); // РѕСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РѕС€РёР±РєР°-РїСЂРёС‡РёРЅР°
         } else {
             throw e;
         }
