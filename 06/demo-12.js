@@ -1,12 +1,12 @@
-/** Конструкция try…catch **/
-/** finally и return **/
+/** РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ tryвЂ¦catch **/
+/** finally Рё return **/
 
 (function () {
 
     function func() {
 
         try {
-            // сразу вернуть значение
+            // СЃСЂР°Р·Сѓ РІРµСЂРЅСѓС‚СЊ Р·РЅР°С‡РµРЅРёРµ
             return 1;
 
         } catch (e) {
@@ -16,6 +16,6 @@
         }
     }
 
-    alert( func() ); // сначала finally, потом 1
+    alert( func() ); // СЃРЅР°С‡Р°Р»Р° finally, РїРѕС‚РѕРј 1
 
 })();

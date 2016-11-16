@@ -1,5 +1,5 @@
-/** Конструкция try…catch **/
-/** Секция finally **/
+/** РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ tryвЂ¦catch **/
+/** РЎРµРєС†РёСЏ finally **/
 
 (function () {
 
@@ -7,7 +7,7 @@
         return n ? (n + sum(n - 1)) : 0;
     }
 
-    var n = +prompt('Введите n?', 100);
+    var n = +prompt('Р’РІРµРґРёС‚Рµ n?', 100);
 
     var start = new Date();
 
@@ -19,7 +19,7 @@
         var diff = new Date() - start;
     }
 
-    alert( result ? result : 'была ошибка' );
-    alert( "Выполнение заняло " + diff );
+    alert( result ? result : 'Р±С‹Р»Р° РѕС€РёР±РєР°' );
+    alert( "Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РЅСЏР»Рѕ " + diff );
 
 })();

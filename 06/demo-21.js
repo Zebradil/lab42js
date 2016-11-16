@@ -1,10 +1,10 @@
-/**  Функциональное наследование **/
+/**  Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ **/
 
 (function () {
 
 
     function Machine() {
-        this._enabled = false; // вместо var enabled
+        this._enabled = false; // РІРјРµСЃС‚Рѕ var enabled
 
         this.enable = function() {
             this._enabled = true;

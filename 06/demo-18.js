@@ -1,9 +1,9 @@
-/**  Геттеры и сеттеры **/
-/**  Геттер и сеттер для воды **/
+/**  Р“РµС‚С‚РµСЂС‹ Рё СЃРµС‚С‚РµСЂС‹ **/
+/**  Р“РµС‚С‚РµСЂ Рё СЃРµС‚С‚РµСЂ РґР»СЏ РІРѕРґС‹ **/
 
 (function () {
 
-    function CoffeeMachine(power, capacity) { // capacity - ёмкость кофеварки
+    function CoffeeMachine(power, capacity) { // capacity - С‘РјРєРѕСЃС‚СЊ РєРѕС„РµРІР°СЂРєРё
         var waterAmount = 0;
 
         var WATER_HEAT_CAPACITY = 4200;
@@ -12,20 +12,20 @@
             return waterAmount * WATER_HEAT_CAPACITY * 80 / power;
         }
 
-        // "умная" установка свойства
+        // "СѓРјРЅР°СЏ" СѓСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІР°
         this.setWaterAmount = function(amount) {
             if (amount < 0) {
-                throw new Error("Значение должно быть положительным");
+                throw new Error("Р—РЅР°С‡РµРЅРёРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
             }
             if (amount > capacity) {
-                throw new Error("Нельзя залить воды больше, чем " + capacity);
+                throw new Error("РќРµР»СЊР·СЏ Р·Р°Р»РёС‚СЊ РІРѕРґС‹ Р±РѕР»СЊС€Рµ, С‡РµРј " + capacity);
             }
 
             waterAmount = amount;
         };
 
         function onReady() {
-            alert( 'Кофе готов!' );
+            alert( 'РљРѕС„Рµ РіРѕС‚РѕРІ!' );
         }
 
         this.run = function() {
@@ -35,6 +35,6 @@
     }
 
     var coffeeMachine = new CoffeeMachine(1000, 500);
-    coffeeMachine.setWaterAmount(600); // упс, ошибка!
+    coffeeMachine.setWaterAmount(600); // СѓРїСЃ, РѕС€РёР±РєР°!
 
 })();

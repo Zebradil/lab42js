@@ -1,5 +1,5 @@
-/** Конструкция try…catch **/
-/** finally и return **/
+/** РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ tryвЂ¦catch **/
+/** finally Рё return **/
 
 (function () {
 
@@ -7,10 +7,10 @@
         try {
             return 1;
         } finally {
-            alert( 'Вызов завершён' );
+            alert( 'Р’С‹Р·РѕРІ Р·Р°РІРµСЂС€С‘РЅ' );
         }
     }
 
-    alert( func() ); // сначала finally, потом 1
+    alert( func() ); // СЃРЅР°С‡Р°Р»Р° finally, РїРѕС‚РѕРј 1
 
 })();

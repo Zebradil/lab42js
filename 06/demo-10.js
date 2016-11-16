@@ -1,11 +1,11 @@
-/** Конструкция try…catch **/
-/** Секция finally **/
+/** РљРѕРЅСЃС‚СЂСѓРєС†РёСЏ tryвЂ¦catch **/
+/** РЎРµРєС†РёСЏ finally **/
 
 (function () {
 
     try {
         alert( 'try' );
-        if (confirm('Сгенерировать ошибку?')) BAD_CODE();
+        if (confirm('РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РѕС€РёР±РєСѓ?')) BAD_CODE();
     } catch (e) {
         alert( 'catch' );
     } finally {

@@ -1,21 +1,21 @@
-/**  Внутренний и внешний интерфейс **/
+/**  Р’РЅСѓС‚СЂРµРЅРЅРёР№ Рё РІРЅРµС€РЅРёР№ РёРЅС‚РµСЂС„РµР№СЃ **/
 (function () {
 
     function CoffeeMachine(power) {
 
         this.waterAmount = 0;
 
-        // физическая константа - удельная теплоёмкость воды для getBoilTime
+        // С„РёР·РёС‡РµСЃРєР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° - СѓРґРµР»СЊРЅР°СЏ С‚РµРїР»РѕС‘РјРєРѕСЃС‚СЊ РІРѕРґС‹ РґР»СЏ getBoilTime
         var WATER_HEAT_CAPACITY = 4200;
 
-        // расчёт времени для кипячения
+        // СЂР°СЃС‡С‘С‚ РІСЂРµРјРµРЅРё РґР»СЏ РєРёРїСЏС‡РµРЅРёСЏ
         function getBoilTime() {
-            return this.waterAmount * WATER_HEAT_CAPACITY * 80 / power; // ошибка!
+            return this.waterAmount * WATER_HEAT_CAPACITY * 80 / power; // РѕС€РёР±РєР°!
         }
 
-        // что делать по окончании процесса
+        // С‡С‚Рѕ РґРµР»Р°С‚СЊ РїРѕ РѕРєРѕРЅС‡Р°РЅРёРё РїСЂРѕС†РµСЃСЃР°
         function onReady() {
-            alert( 'Кофе готово!' );
+            alert( 'РљРѕС„Рµ РіРѕС‚РѕРІРѕ!' );
         }
 
         this.run = function() {

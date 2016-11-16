@@ -1,10 +1,10 @@
-/**  Функциональное наследование **/
+/**  Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ **/
 
 (function () {
 
 
     function CoffeeMachine(power) {
-        Machine.call(this); // отнаследовать
+        Machine.call(this); // РѕС‚РЅР°СЃР»РµРґРѕРІР°С‚СЊ
 
         var waterAmount = 0;
 
