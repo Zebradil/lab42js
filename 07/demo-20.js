@@ -44,12 +44,12 @@
         if (err instanceof PropertyError) {
             if (err.property == 'name') {
                 // если в данном месте кода возможны анонимы, то всё нормально
-                alert( "Здравствуйте, Аноним!" );
+                console.log( "Здравствуйте, Аноним!" );
             } else {
-                alert( err.message ); // Ошибка в свойстве ...
+                console.log( err.message ); // Ошибка в свойстве ...
             }
         } else if (err instanceof SyntaxError) {
-            alert( "Ошибка в синтаксисе данных: " + err.message );
+            console.log( "Ошибка в синтаксисе данных: " + err.message );
         } else {
             throw err; // неизвестная ошибка, не знаю что с ней делать
         }

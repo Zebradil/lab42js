@@ -11,6 +11,6 @@
     Rabbit.prototype = {};
 
 // ...instanceof перестал работать!
-    alert( rabbit instanceof Rabbit ); // false
+    console.log( rabbit instanceof Rabbit ); // false
 
 })();

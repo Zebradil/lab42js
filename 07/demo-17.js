@@ -9,6 +9,6 @@
     var rabbit = new Rabbit();
 
 // проверяем -- этот объект создан Rabbit?
-    alert( rabbit instanceof Rabbit ); // true, верно
+    console.log( rabbit instanceof Rabbit ); // true, верно
 
 })();

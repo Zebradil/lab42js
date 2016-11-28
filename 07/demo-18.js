@@ -3,7 +3,7 @@
 (function () {
     "use strict";
     var arr = [];
-    alert( arr instanceof Array ); // true
-    alert( arr instanceof Object ); // true
+    console.log( arr instanceof Array ); // true
+    console.log( arr instanceof Object ); // true
 
 })();
