@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<div>Читатели:</div>
+<ul>
+    <li>Вася</li>
+    <li>Петя</li>
+</ul>
+
+<!-- комментарий -->
+
+<script>
+    var childNodes = document.body.childNodes;
+
+    for (var i = 0; i < childNodes.length; i++) {
+
+        // отфильтровать не-элементы
+        if (childNodes[i].nodeType != 1) continue;
+
+        console.log( childNodes[i] );
+
+    }
+</script>
+</body>
+
+</html>

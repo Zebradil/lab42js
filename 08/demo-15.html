@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<!-- комментарий -->
+
+<script>
+    // для комментария
+    alert( document.body.firstChild.nodeName ); // #comment
+    alert( document.body.firstChild.tagName ); // undefined (в IE8- воскл. знак "!")
+
+    // для документа
+    alert( document.nodeName ); // #document, т.к. корень DOM -- не элемент
+    alert( document.tagName ); // undefined
+</script>
+</body>
+
+</html>
