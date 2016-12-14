@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<input id="input" type="checkbox" checked>
+
+<script>
+    // работа с checked через атрибут
+    alert( input.getAttribute('checked') ); // пустая строка
+    input.removeAttribute('checked'); // снять галочку
+
+    // работа с checked через свойство
+    alert( input.checked ); // false <-- может быть только true/false
+    input.checked = true; // поставить галочку
+</script>
+</body>
+
+</html>

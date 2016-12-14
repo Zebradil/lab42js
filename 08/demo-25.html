@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+
+<body class="main page">
+<script>
+    var classList = document.body.classList;
+
+    classList.remove('page'); // удалить класс
+    classList.add('post'); // добавить класс
+
+    for (var i = 0; i < classList.length; i++) { // перечислить классы
+        alert( classList[i] ); // main, затем post
+    }
+
+    alert( classList.contains('post') ); // проверить наличие класса
+
+    alert( document.body.className ); // main post, тоже работает
+</script>
+</body>
+
+</html>

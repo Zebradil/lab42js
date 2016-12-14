@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<input type="radio">
+<input type="no-such-type">
+
+<script>
+    alert( document.body.children[0].type ); // radio, поддерживается
+    alert( document.body.children[1].type ); // text, не поддерживается
+</script>
+</body>
+
+</html>

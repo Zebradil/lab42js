@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<style>
+    [hidden] { display: none }
+</style>
+
+<script>
+    if (document.documentElement.hidden === undefined) {
+        Object.defineProperty(Element.prototype, "hidden", {
+            set: function(value) {
+                this.setAttribute('hidden', value);
+            },
+            get: function() {
+                return this.getAttribute('hidden');
+            }
+        });
+    }
+</script>
+
+<div>Текст</div>
+<div hidden>С атрибутом hidden</div>
+<div id="last">Со свойством hidden</div>
+
+<script>
+    last.hidden = true;
+</script>
+</body>
+
+</html>

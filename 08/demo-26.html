@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<style>
+    .order[order-state="new"] {
+        color: green;
+    }
+
+    .order[order-state="pending"] {
+        color: blue;
+    }
+
+    .order[order-state="canceled"] {
+        color: red;
+    }
+</style>
+
+<div class="order" order-state="new">
+    Новый заказ.
+</div>
+
+<div class="order" order-state="pending">
+    Ожидающий заказ.
+</div>
+
+<div class="order" order-state="canceled">
+    Заказ отменён.
+</div>
+</body>
+
+</html>

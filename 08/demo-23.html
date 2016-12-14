@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<input id="input" type="text" value="markup">
+<script>
+    input.value = 'new'; // поменяли свойство
+
+    alert( input.getAttribute('value') ); // 'markup', не изменилось!
+</script>
+</body>
+
+</html>
