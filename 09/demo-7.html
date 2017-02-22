@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>5</li>
+</ul>
+
+<script>
+    var ul = document.body.children[0];
+    var li5 = ul.children[2];
+
+    li5.insertAdjacentHTML("beforeBegin", "<li>3</li><li>4</li>");
+</script>
+
+</body>
+</html>

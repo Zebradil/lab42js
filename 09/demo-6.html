@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .alert {
+        padding: 15px;
+        border: 1px solid #d6e9c6;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+    }
+</style>
+
+<script>
+    var div = document.createElement('div');
+    div.className = "alert alert-success";
+    document.body.appendChild(div);
+
+    var text = prompt("Введите текст для сообщения", "Жили были <a> и <b>!");
+
+    // вставится именно как текст, без HTML-обработки
+    div.appendChild(document.createTextNode(text));
+</script>
+</body>
+</html>

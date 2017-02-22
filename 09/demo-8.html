@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.polyfill.io/v1/polyfill.js?features=Element.prototype.append,Element.prototype.after"></script>
+</head>
+
+<body>
+<script>
+    // добавим элемент в конец <body>
+    var p = document.createElement('p');
+    document.body.append(p);
+
+    var em = document.createElement('em');
+    em.append('Мир!');
+
+    // вставить в параграф текстовый и обычный узлы
+    p.append("Привет, ", em);
+
+    // добавить элемент после <p>
+    p.after(document.createElement('hr'))
+</script>
+
+</body>
+
+</html>
