@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        button {
+            transition: width 1s;
+            width: 100px;
+        }
+
+        .wide {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="elem" onclick="this.classList.toggle('wide');">
+    Нажми меня
+</button>
+
+<script>
+    elem.ontransitionend = function() {
+        alert( "ontransitionend" ); // не сработает
+    };
+
+    elem.addEventListener("transitionend", function() {
+        alert( "addEventListener" ); // сработает по окончании анимации
+    });
+</script>
+</body>
+</html>

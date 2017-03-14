@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        html{
+            height: 100%;
+        }
+
+        body{
+            text-align: center;
+            height: 150%;
+        }
+
+        #coords-show-mark {
+            color: #fff;
+            background: #5e81a8;
+            padding: 7px 16px 8px;
+            font-size: 14px;
+            line-height: 20px;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            margin-top: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+<button id="coords-show-mark" onclick="showMessage()">Волшебная кнопулечка</button>
+
+
+<script>
+
+    function showMessage() {
+        var elem = document.getElementById("coords-show-mark");
+        // Использование
+        // добавить на 5 сек в документ
+        var message = createMessageUnder(elem, 'Привет, мир!');
+        document.body.appendChild(message);
+        setTimeout(function() {
+            document.body.removeChild(message);
+        }, 5000);
+    }
+
+    function createMessageUnder(elem, text) {
+        // получить координаты
+        var coords = elem.getBoundingClientRect();
+
+        // создать элемент для сообщения
+        var message = document.createElement('div');
+        // стиль лучше задавать классом
+        message.style.cssText = "position:fixed; color: red";
+
+        // к координатам обязательно добавляем "px"!
+        message.style.left = coords.left + "px";
+        message.style.top = coords.bottom + "px";
+
+        message.innerHTML = text;
+
+        return message;
+    }
+
+</script>
+
+</body>
+
+</html>

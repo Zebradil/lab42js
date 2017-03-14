@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<input id="elem" type="button" value="Нажми меня"/>
+
+<script>
+    function handler1() {
+        alert('Спасибо!');
+    };
+
+    function handler2() {
+        alert('Спасибо ещё раз!');
+    }
+
+    elem.onclick = function() { alert("Привет"); };
+    elem.addEventListener("click", handler1); // Спасибо!
+    elem.addEventListener("click", handler2); // Спасибо ещё раз!
+</script>
+</body>
+</html>
