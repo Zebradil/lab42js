@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<h1 id="elem">Привет от скрипта!</h1>
+
+<script>
+    document.addEventListener("hello", function(event) {
+        alert( "Привет" );
+        event.preventDefault();
+    }, false);
+
+    var event = document.createEvent("Event");
+    event.initEvent("hello", true, true);
+
+    if (elem.dispatchEvent(event) === false) {
+        alert( 'Событие было отменено preventDefault' );
+    }
+</script>
+
+</body>
+
+</html>

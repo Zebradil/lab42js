@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<div id="menu">
+    <button data-action="save">Сохранить</button>
+    <button data-action="load">Загрузить</button>
+    <button data-action="search">Поиск</button>
+</div>
+
+<script>
+    function Menu(elem) {
+        this.save = function() {
+            alert( 'сохраняю' );
+        };
+        this.load = function() {
+            alert( 'загружаю' );
+        };
+        this.search = function() {
+            alert( 'ищу' );
+        };
+
+        var self = this;
+
+        elem.onclick = function(e) {
+            var target = e.target;
+            var action = target.getAttribute('data-action');
+            if (action) {
+                self[action]();
+            }
+        };
+    }
+
+    new Menu(menu);
+</script>
+</body>
+
+</html>

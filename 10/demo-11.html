@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<style>
+    form {
+        background-color: green;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    div {
+        background-color: blue;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 100px;
+        height: 100px;
+    }
+
+    p {
+        background-color: red;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+    }
+
+    body {
+        line-height: 25px;
+        font-size: 16px;
+    }
+</style>
+
+<form>FORM
+    <div>DIV
+        <p>P</p>
+    </div>
+</form>
+
+<script>
+    var elems = document.querySelectorAll('form,div,p');
+
+    for (var i = 0; i < elems.length; i++) {
+        elems[i].addEventListener("click", highlightThis, true);
+//        elems[i].addEventListener("click", highlightThis, false);
+    }
+
+    function highlightThis() {
+        this.style.backgroundColor = 'yellow';
+        alert(this.tagName);
+        this.style.backgroundColor = '';
+    }
+</script>
+
+</body>
+</html>
