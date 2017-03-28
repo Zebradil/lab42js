@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<ul>
+    <li ondblclick="clearSelection()">Выделение отменяется при двойном клике.</li>
+</ul>
+
+<script>
+    function clearSelection() {
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        } else { // старый IE
+            document.selection.empty();
+        }
+    }
+</script>
+
+</body>
+</html>

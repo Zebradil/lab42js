@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .blue {
+            background: blue;
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+
+        .red {
+            background: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+
+        textarea {
+            height: 100px;
+            width: 400px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="blue" onmouseover="mouselog(event)" onmouseout="mouselog(event)">
+    <div class="red"></div>
+</div>
+
+<textarea id="text">mouseover [target: blue] mouseout [target: blue] mouseover [target: red]
+  </textarea>
+<input type="button" onclick="text.value=''" value="Очистить">
+
+<script>
+    function mouselog(event) {
+        text.value += event.type + ' [target: ' + event.target.className + ']\n'
+        text.scrollTop = text.scrollHeight
+    }
+</script>
+
+</body>
+
+</html>

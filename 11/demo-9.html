@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #blue {
+            background: blue;
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+
+        #red {
+            background: red;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            left: 45px;
+            top: 45px;
+        }
+
+        #text {
+            display: block;
+            height: 100px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="blue" onmouseenter="log(event)" onmouseleave="log(event)">
+    <div id="red"></div>
+</div>
+
+<textarea id="text"></textarea>
+<input type="button" onclick="text.value=''" value="Очистить">
+
+<script>
+    function log(event) {
+        text.value += event.type + ' [target: ' + event.target.id + ']\n';
+        text.scrollTop = text.scrollHeight;
+    }
+</script>
+
+</body>
+
+</html>

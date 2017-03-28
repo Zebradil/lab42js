@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<style>
+    b {
+        -webkit-user-select: none;
+        /* user-select -- это нестандартное свойство */
+
+        -moz-user-select: none;
+        /* поэтому нужны префиксы */
+
+        -ms-user-select: none;
+    }
+</style>
+
+Строка до..
+<div ondblclick="alert('Тест')">
+    <b>Этот текст нельзя выделить (кроме IE9-)</b>
+</div>
+.. Строка после
+
+</body>
+</html>

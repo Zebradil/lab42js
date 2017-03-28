@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<span ondblclick="alert('двойной клик!')">Текст</span>
+<br>
+<br>
+<br>
+
+<div ondblclick="alert('Тест')" onselectstart="return false" onmousedown="return false">
+    Двойной клик сюда выведет "Тест", без выделения
+</div>
+
+<br>
+<br>
+<br>
+
+Элементы списка не выделяются при клике:
+<ul onmousedown="return false" onselectstart="return false">
+    <li>Винни-Пух</li>
+    <li>Ослик Иа</li>
+    <li>Мудрая Сова</li>
+    <li>Кролик. Просто кролик.</li>
+</ul>
+
+</body>
+</html>
