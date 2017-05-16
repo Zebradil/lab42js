@@ -2,17 +2,17 @@
 <html>
 <body>
 
-<h1 id="elem">РџСЂРёРІРµС‚ РѕС‚ СЃРєСЂРёРїС‚Р°!</h1>
+<h1 id="elem">Привет от скрипта!</h1>
 
 <script>
     document.addEventListener("hello", function(event) { // (1)
-        alert("РџСЂРёРІРµС‚");
+        alert("Привет");
         event.preventDefault();  // (2)
     }, false);
 
     var event = new Event("hello", {bubbles: true, cancelable: true}); // (3)
     if (elem.dispatchEvent(event) === false) {
-        alert('РЎРѕР±С‹С‚РёРµ Р±С‹Р»Рѕ РѕС‚РјРµРЅРµРЅРѕ preventDefault');
+        alert('Событие было отменено preventDefault');
     }
 </script>
 

@@ -17,19 +17,19 @@
             cancelable: true
         });
         if (!rabbit.dispatchEvent(event)) {
-            alert( 'РґРµР№СЃС‚РІРёРµ РѕС‚РјРµРЅРµРЅРѕ РѕР±СЂР°Р±РѕС‚С‡РёРєРѕРј' );
+            alert( 'действие отменено обработчиком' );
         } else {
             rabbit.hidden = true;
         }
     }
 
     rabbit.addEventListener('hide', function(event) {
-        if (confirm("Р’С‹Р·РІР°С‚СЊ preventDefault?")) {
+        if (confirm("Вызвать preventDefault?")) {
             event.preventDefault();
         }
     });
 
-    // РїСЂСЏС‡РµРјСЃСЏ С‡РµСЂРµР· 2 СЃРµРєСѓРЅРґС‹
+    // прячемся через 2 секунды
     setTimeout(hide, 2000);
 
 </script>

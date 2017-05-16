@@ -3,21 +3,21 @@
 
 <body>
 <div id="menu">
-    <button data-action="save">РЎРѕС…СЂР°РЅРёС‚СЊ</button>
-    <button data-action="load">Р—Р°РіСЂСѓР·РёС‚СЊ</button>
-    <button data-action="search">РџРѕРёСЃРє</button>
+    <button data-action="save">Сохранить</button>
+    <button data-action="load">Загрузить</button>
+    <button data-action="search">Поиск</button>
 </div>
 
 <script>
     function Menu(elem) {
         this.save = function() {
-            alert( 'СЃРѕС…СЂР°РЅСЏСЋ' );
+            alert( 'сохраняю' );
         };
         this.load = function() {
-            alert( 'Р·Р°РіСЂСѓР¶Р°СЋ' );
+            alert( 'загружаю' );
         };
         this.search = function() {
-            alert( 'РёС‰Сѓ' );
+            alert( 'ищу' );
         };
 
         var self = this;
